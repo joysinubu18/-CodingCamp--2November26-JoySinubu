@@ -1,0 +1,617 @@
+/* =============================================================
+   ToDo List Life Dashboard — style.css
+   Single stylesheet; all design tokens defined as CSS custom
+   properties on :root. No external dependencies.
+   ============================================================= */
+
+/* ── 1. Design Tokens ─────────────────────────────────────── */
+:root {
+  /* Colours */
+  --color-bg:        #1a1a2e;
+  --color-surface:   #16213e;
+  --color-accent:    #0f3460;
+  --color-highlight: #e94560;
+  --color-text:      #eaeaea;
+  --color-muted:     #888;
+  --color-error:     #ff6b6b;
+
+  /* Typography */
+  --font-body:  'Segoe UI', system-ui, sans-serif;
+  --font-mono:  'Courier New', monospace;
+  --font-size-body:  16px;   /* minimum 14 px required */
+  --font-size-label: 13px;   /* minimum 12 px required */
+
+  /* Geometry */
+  --radius:          8px;
+  --spacing-section: 24px;   /* minimum 16 px required */
+
+  /* Derived helpers */
+  --transition-fast: 150ms ease;
+}
+
+/* ── 2. Reset / Base ─────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-size-body);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: var(--spacing-section);
+}
+
+/* ── 3. Focus Rings (visible for all interactive elements) ── */
+:focus-visible {
+  outline: 2px solid var(--color-highlight);
+  outline-offset: 3px;
+}
+
+/* ── 4. Typography helpers ───────────────────────────────── */
+h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-highlight);
+  margin-bottom: 14px;
+}
+
+label,
+.label-text {
+  font-size: var(--font-size-label);
+  color: var(--color-muted);
+}
+
+/* ── 5. Page Layout ──────────────────────────────────────── */
+/* Header: Greeting Widget */
+header {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  padding: var(--spacing-section);
+  margin-bottom: var(--spacing-section);
+}
+
+/* Main: two-column grid → single column on mobile */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: var(--spacing-section);
+}
+
+/* Quick Links spans both columns */
+#links-section {
+  grid-column: 1 / -1;
+}
+
+/* ── 6. Section Cards ────────────────────────────────────── */
+section {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  padding: var(--spacing-section);
+}
+
+/* ── 7. Greeting Widget ──────────────────────────────────── */
+#greeting-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+#clock-greeting {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-highlight);
+  flex: 1 1 auto;
+}
+
+#clock-time {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  flex: 0 0 auto;
+}
+
+#clock-date {
+  font-size: var(--font-size-body);
+  color: var(--color-muted);
+  flex: 0 0 auto;
+}
+
+/* ── 8. Focus Timer ──────────────────────────────────────── */
+#timer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#timer-display {
+  font-family: var(--font-mono);
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+  background-color: var(--color-accent);
+  border-radius: var(--radius);
+  padding: 16px 32px;
+  min-width: 180px;
+  text-align: center;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#timer-start,
+#timer-stop,
+#timer-reset {
+  min-width: 80px;
+  min-height: 44px;      /* 44 × 44 px touch target */
+  padding: 8px 20px;
+}
+
+/* Timer completion alert */
+#timer-alert {
+  font-size: var(--font-size-body);
+  color: var(--color-highlight);
+  font-weight: 600;
+  text-align: center;
+  min-height: 1.4em;     /* reserve space so layout doesn't jump */
+}
+
+/* ── 9. Task Manager ─────────────────────────────────────── */
+#tasks-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.task-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+#task-input {
+  flex: 1 1 auto;
+}
+
+#task-add-btn {
+  min-width: 60px;
+  min-height: 44px;
+  flex: 0 0 auto;
+}
+
+#task-error {
+  font-size: var(--font-size-label);
+  color: var(--color-error);
+  min-height: 1.2em;
+  display: block;
+}
+
+#task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Individual task items */
+#task-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-accent);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  min-height: 44px;
+}
+
+/* Checkbox/toggle control */
+#task-list .task-toggle {
+  min-width: 24px;
+  min-height: 24px;
+  width: 24px;
+  height: 24px;
+  accent-color: var(--color-highlight);
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+/* Task title span */
+#task-list .task-title {
+  flex: 1 1 auto;
+  font-size: var(--font-size-body);
+  word-break: break-word;
+}
+
+/* Completed task: strikethrough + muted colour */
+#task-list .task-title.completed {
+  text-decoration: line-through;
+  color: var(--color-muted);
+}
+
+/* Inline edit input inside the task row */
+#task-list .task-edit-input {
+  flex: 1 1 auto;
+}
+
+/* Task action buttons (edit, delete) */
+#task-list .task-btn {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 6px 10px;
+  flex: 0 0 auto;
+  font-size: 0.85rem;
+}
+
+#task-list .task-btn-delete {
+  color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+#task-list .task-btn-delete:hover:not(:disabled) {
+  background-color: var(--color-error);
+  color: var(--color-bg);
+}
+
+/* ── 10. Quick Links ─────────────────────────────────────── */
+#links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.link-input-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+#link-label-input {
+  flex: 1 1 140px;
+}
+
+#link-url-input {
+  flex: 2 1 240px;
+}
+
+#link-add-btn {
+  min-width: 60px;
+  min-height: 44px;
+  flex: 0 0 auto;
+  align-self: flex-start;
+}
+
+.link-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1 1 140px;
+}
+
+.link-field-group:last-of-type {
+  flex: 2 1 240px;
+}
+
+#link-label-error,
+#link-url-error {
+  font-size: var(--font-size-label);
+  color: var(--color-error);
+  min-height: 1.2em;
+  display: block;
+}
+
+/* Link cap / general link error */
+#link-cap-error {
+  font-size: var(--font-size-label);
+  color: var(--color-error);
+  min-height: 1.2em;
+  display: block;
+}
+
+/* Link buttons container */
+#link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Empty-state message */
+#link-list .link-empty {
+  font-size: var(--font-size-body);
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* Each link entry: open button + delete button grouped */
+.link-entry {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.link-btn-open {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 8px 14px;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  border: 1px solid var(--color-highlight);
+  border-radius: var(--radius) 0 0 var(--radius);
+  cursor: pointer;
+  font-size: var(--font-size-body);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.link-btn-open:hover:not(:disabled) {
+  background-color: var(--color-highlight);
+  color: var(--color-bg);
+}
+
+.link-btn-delete {
+  min-height: 44px;
+  min-width: 36px;
+  padding: 8px 10px;
+  background-color: var(--color-accent);
+  color: var(--color-error);
+  border: 1px solid var(--color-error);
+  border-left: none;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.link-btn-delete:hover:not(:disabled) {
+  background-color: var(--color-error);
+  color: var(--color-bg);
+}
+
+/* ── 11. Shared Form Controls ────────────────────────────── */
+input[type="text"],
+input[type="url"],
+input {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  border: 1px solid var(--color-muted);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  padding: 10px 12px;
+  min-height: 44px;        /* 44 px touch target height */
+  width: 100%;
+  transition: border-color var(--transition-fast);
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+input:focus {
+  border-color: var(--color-highlight);
+  outline: none;           /* replaced by :focus-visible rule */
+}
+
+input::placeholder {
+  color: var(--color-muted);
+}
+
+/* ── 12. Shared Button Styles ────────────────────────────── */
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-highlight);
+  color: var(--color-bg);
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 44px;        /* 44 × 44 px touch targets */
+  min-width: 44px;
+  padding: 8px 16px;
+  transition:
+    background-color var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+button:hover:not(:disabled) {
+  background-color: #c73652;  /* slightly darker highlight */
+}
+
+/* Disabled state: visually distinct reduced opacity */
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Secondary / outline button variant (used for timer stop / reset) */
+button.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-highlight);
+  color: var(--color-highlight);
+}
+
+button.btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-highlight);
+  color: var(--color-bg);
+}
+
+button.btn-tertiary {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  border: 1px solid var(--color-muted);
+}
+
+button.btn-tertiary:hover:not(:disabled) {
+  background-color: var(--color-muted);
+  color: var(--color-bg);
+}
+
+/* ── 13. Storage / General Error Banner ─────────────────── */
+#error-banner {
+  background-color: var(--color-error);
+  color: var(--color-bg);
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing-section);
+  display: none;           /* shown by JS when needed */
+}
+
+#error-banner.visible {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+#error-banner .banner-close {
+  background: none;
+  border: none;
+  color: var(--color-bg);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 8px;
+}
+
+/* ── 14. Responsive — mobile single-column ───────────────── */
+@media (max-width: 640px) {
+  body {
+    padding: 12px;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  #links-section {
+    grid-column: 1;
+  }
+
+  #greeting-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  #clock-time {
+    font-size: 1.6rem;
+  }
+
+  #timer-display {
+    font-size: 2.5rem;
+    padding: 12px 20px;
+  }
+
+  .link-input-row {
+    flex-direction: column;
+  }
+
+  #link-add-btn {
+    width: 100%;
+  }
+}
+
+/* ── 15. Theme Toggle Button ─────────────────────────────── */
+.theme-toggle-btn {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
+  background-color: transparent;
+  border: 2px solid var(--color-muted);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--color-highlight);
+  background-color: var(--color-accent);
+}
+
+/* Override header to accommodate theme toggle */
+header.greeting-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* ── 16. Light Mode Overrides ───────────────────────────── */
+body.light-mode {
+  --color-bg:        #f5f5f5;
+  --color-surface:   #ffffff;
+  --color-accent:    #dce3f0;
+  --color-highlight: #c0392b;
+  --color-text:      #1a1a2e;
+  --color-muted:     #555555;
+  --color-error:     #c0392b;
+}
+
+/* ── 17. Greeting Name Row ───────────────────────────────── */
+.greeting-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.user-name-display {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-highlight);
+}
+
+.user-name-edit-btn {
+  min-width: 36px;
+  min-height: 36px;
+  padding: 4px 8px;
+  background-color: transparent;
+  border: 1px solid var(--color-muted);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--color-muted);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.user-name-edit-btn:hover {
+  border-color: var(--color-highlight);
+  color: var(--color-highlight);
+}

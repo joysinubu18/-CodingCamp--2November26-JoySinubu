@@ -1,0 +1,374 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Create directory structure (`css/` and `js/` subdirectories) and `index.html` in project root": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931640092
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931654982
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931791520
+      }
+    ],
+    "1.2 Create `css/style.css` with CSS custom properties and full visual layout": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931641098
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931660420
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931797363
+      }
+    ],
+    "2.1 Create the IIFE wrapper and `Config` namespace": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931641250
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793932112753
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793932145203
+      }
+    ],
+    "2.2 Implement the `Storage` module": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931641384
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793932150713
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793932192737
+      }
+    ],
+    "3.1 Implement `Greeting` helper functions": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931641484
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793932198922
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793932908725
+      }
+    ],
+    "3.2 Implement `Greeting.init()` with DOM bindings and interval": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931641605
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793932920111
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793932996335
+      }
+    ],
+    "4.1 Implement `Timer` state machine and drift-corrected countdown": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931641735
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793932204796
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793932914440
+      }
+    ],
+    "4.2 Implement `Timer` DOM bindings and `Timer.init()`": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931641860
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793932925537
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793933002159
+      }
+    ],
+    "5. Checkpoint — verify HTML, CSS, Greeting, and Timer": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931641939
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793933009056
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793933023221
+      }
+    ],
+    "6.1 Implement `Tasks` data operations and storage helpers": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931642015
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793933028945
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793934144502
+      }
+    ],
+    "6.2 Implement `Tasks` DOM render engine and `Tasks.init()`": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931642097
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793934157235
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793934574702
+      }
+    ],
+    "7.1 Implement `Links` validation and data operations": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931642171
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793933034614
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793934150550
+      }
+    ],
+    "7.2 Implement `Links` DOM render engine and `Links.init()`": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931642260
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793934162916
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793934580681
+      }
+    ],
+    "8.1 Implement `App.init()` and register `DOMContentLoaded` listener": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931642337
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793934586739
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793934641426
+      }
+    ],
+    "9. Final checkpoint — end-to-end smoke test": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931642417
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793934647555
+      },
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793934666151
+      }
+    ],
+    "1. Create project structure and HTML entry point": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793931797477
+      }
+    ],
+    "2. Implement `Config` and `Storage` modules in `js/app.js`": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793932192856
+      }
+    ],
+    "3. Implement the `Greeting` module": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793932996461
+      }
+    ],
+    "4. Implement the `Timer` module": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793933002247
+      }
+    ],
+    "6. Implement the `Tasks` module": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793934574799
+      }
+    ],
+    "7. Implement the `Links` module": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793934580762
+      }
+    ],
+    "8. Implement `App.init()` and wire all modules": [
+      {
+        "executionId": "8327ad8c-d4b0-49e0-9af8-6464fda2587e",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793934641562
+      }
+    ],
+    "10.1 Add `theme-toggle` button to HTML and light-mode CSS overrides": [
+      {
+        "executionId": "774f1ae3-a5ea-4c30-96b2-0c4dc7aa4a9a",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793935434754
+      },
+      {
+        "executionId": "774f1ae3-a5ea-4c30-96b2-0c4dc7aa4a9a",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793935447936
+      },
+      {
+        "executionId": "774f1ae3-a5ea-4c30-96b2-0c4dc7aa4a9a",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793935819690
+      }
+    ],
+    "10.2 Implement `Theme` module in `js/app.js`": [
+      {
+        "executionId": "774f1ae3-a5ea-4c30-96b2-0c4dc7aa4a9a",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793935434915
+      },
+      {
+        "executionId": "774f1ae3-a5ea-4c30-96b2-0c4dc7aa4a9a",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793935834199
+      }
+    ],
+    "11.1 Add name display and edit button to HTML": [
+      {
+        "executionId": "774f1ae3-a5ea-4c30-96b2-0c4dc7aa4a9a",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793935435015
+      },
+      {
+        "executionId": "774f1ae3-a5ea-4c30-96b2-0c4dc7aa4a9a",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793935847277
+      },
+      {
+        "executionId": "774f1ae3-a5ea-4c30-96b2-0c4dc7aa4a9a",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793935913418
+      }
+    ],
+    "11.2 Implement name persistence and greeting integration in the `Greeting` module": [
+      {
+        "executionId": "774f1ae3-a5ea-4c30-96b2-0c4dc7aa4a9a",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793935435130
+      },
+      {
+        "executionId": "774f1ae3-a5ea-4c30-96b2-0c4dc7aa4a9a",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793935925563
+      }
+    ],
+    "12.1 Add `isDuplicate` helper and update `addTask` / `editTask` in the `Tasks` module": [
+      {
+        "executionId": "774f1ae3-a5ea-4c30-96b2-0c4dc7aa4a9a",
+        "chatSessionId": "sess_38d2c67a-9a1d-45a3-92ee-6c77dc26d744",
+        "timestamp": 1793935435236
+      }
+    ]
+  }
+}

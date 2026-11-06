@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToDo List Life Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="error-banner" role="alert" aria-live="assertive"></div>
+
+  <!-- =====================================================================
+       HEADER — Greeting Widget
+       ===================================================================== -->
+  <header class="greeting-section" aria-label="Greeting widget">
+    <div class="greeting-inner">
+      <div class="greeting-name-row">
+        <span id="clock-greeting" class="greeting-text" aria-live="polite">Good Morning</span>
+        <span id="user-name-display" class="user-name-display"></span>
+        <button id="user-name-edit-btn" type="button" class="user-name-edit-btn" aria-label="Edit name">✏️</button>
+      </div>
+      <span id="clock-time" class="clock-time" aria-label="Current time">--:--:--</span>
+      <span id="clock-date" class="clock-date" aria-label="Current date">---</span>
+    </div>
+    <button id="theme-toggle" type="button" class="theme-toggle-btn" aria-label="Toggle theme" aria-pressed="false">🌙</button>
+  </header>
+
+  <!-- =====================================================================
+       MAIN — Focus Timer, Task Manager, Quick Links
+       ===================================================================== -->
+  <main class="dashboard-main">
+
+    <!-- ----------------------------------------------------------------
+         Focus Timer
+         ---------------------------------------------------------------- -->
+    <section class="widget timer-widget" aria-label="Focus timer">
+      <h2 class="widget-heading">Focus Timer</h2>
+
+      <div id="timer-display" class="timer-display" aria-label="Timer countdown" aria-live="off">25:00</div>
+
+      <!-- Completion notification — role="alert" so screen readers announce it -->
+      <div id="timer-alert" class="timer-alert" role="alert" aria-atomic="true"></div>
+
+      <div class="timer-controls">
+        <button id="timer-start" type="button" aria-label="Start timer">Start</button>
+        <button id="timer-stop"  type="button" aria-label="Stop timer"  disabled>Stop</button>
+        <button id="timer-reset" type="button" aria-label="Reset timer">Reset</button>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------
+         Task Manager
+         ---------------------------------------------------------------- -->
+    <section class="widget task-widget" aria-label="Task manager">
+      <h2 class="widget-heading">Tasks</h2>
+
+      <div class="task-input-row">
+        <label for="task-input" class="sr-only">New task title</label>
+        <input
+          id="task-input"
+          type="text"
+          class="task-input"
+          placeholder="Add a new task…"
+          maxlength="255"
+          aria-describedby="task-error"
+        />
+        <button id="task-add-btn" type="button" aria-label="Add task">Add</button>
+      </div>
+
+      <span id="task-error" class="field-error" role="alert" aria-live="polite"></span>
+
+      <ul id="task-list" class="task-list" aria-label="Task list"></ul>
+    </section>
+
+    <!-- ----------------------------------------------------------------
+         Quick Links
+         ---------------------------------------------------------------- -->
+    <section class="widget links-widget" aria-label="Quick links">
+      <h2 class="widget-heading">Quick Links</h2>
+
+      <div class="links-input-row">
+        <div class="links-field">
+          <label for="link-label-input">Label</label>
+          <input
+            id="link-label-input"
+            type="text"
+            class="link-input"
+            placeholder="e.g. GitHub"
+            maxlength="100"
+            aria-describedby="link-label-error"
+          />
+          <span id="link-label-error" class="field-error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="links-field">
+          <label for="link-url-input">URL</label>
+          <input
+            id="link-url-input"
+            type="url"
+            class="link-input"
+            placeholder="https://example.com"
+            maxlength="2048"
+            aria-describedby="link-url-error"
+          />
+          <span id="link-url-error" class="field-error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <button id="link-add-btn" type="button" aria-label="Add link">Add Link</button>
+      </div>
+
+      <div id="link-list" class="link-list" aria-label="Saved links">
+        <p class="empty-state">No links added yet.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script defer src="js/app.js"></script>
+</body>
+</html>
